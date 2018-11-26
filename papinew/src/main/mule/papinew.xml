@@ -9,7 +9,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener doc:name="Listener" doc:id="f740c575-a148-4017-ba9e-39b19b3917f4" config-ref="HTTP_Listener_config" path="/papi"/>
 		<scatter-gather doc:name="Scatter-Gather" doc:id="aa8a69cd-20db-4083-9a1c-096706272d7c">
 			<route >
-				<http:request method="GET" doc:name="GET /sapi" doc:id="bb2feec4-bbf3-4678-9d32-8d5a9aa443a7" config-ref="HTTP_Request_Sapi" path="${http_request.path}" />
+				<http:request method="GET" doc:name="GET /sapi" doc:id="bb2feec4-bbf3-4678-9d32-8d5a9aa443a7" config-ref="HTTP_Request_Sapi" path="${http_request_sapi.path}" />
 				<ee:transform doc:name="Transform Message" doc:id="41de4b67-ba2a-4190-9b53-a7c4319aa575" >
 					<ee:message >
 						<ee:set-payload ><![CDATA[%dw 2.0
